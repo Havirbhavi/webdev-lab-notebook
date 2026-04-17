@@ -3,8 +3,10 @@ body {
   background: white;
   color: black;
   margin: 0;
+  line-height: 1.6;
 }
 
+/* Header & Footer */
 .top-of-page,
 .bottom-of-page {
   background: black;
@@ -13,6 +15,7 @@ body {
   padding: 15px;
 }
 
+/* Navigation */
 .navigation {
   background: #eee;
   padding: 10px;
@@ -25,12 +28,29 @@ body {
   text-decoration: none;
 }
 
+/* Accessibility improvement */
+.navigation a:hover,
+.navigation a:focus {
+  text-decoration: underline;
+}
+
+/* Sections */
 .page-area {
   padding: 20px;
   border-bottom: 1px solid black;
 }
 
+/* Images */
 img {
   max-width: 300px;
   display: block;
+}
+
+/* Figure spacing */
+figure {
+  margin: 10px 0;
+}
+
+figcaption {
+  font-size: 0.9em;
 }
