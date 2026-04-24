@@ -1,1 +1,260 @@
 /* Add your CSS code here  */
+/* =========================
+   ROOT COLORS
+========================= */
+:root {
+  --ice-blue-juvie: #8fbcd4;
+  --gothic-gray-blue: #6f8796;
+  --dark-slate-infinity: #1f2a33;
+}
+
+/* =========================
+   GLOBAL / RESET
+========================= */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BOOKS PAGE
+========================= */
+
+/* NAVBAR */
+.navbar {
+  background-color: var(--dark-slate-infinity);
+  padding: 15px 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--ice-blue-juvie);
+  font-family: "Cinzel", serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  transition: all 0.3s ease;
+}
+
+/* NAV HOVER */
+.nav-links a:hover {
+  background-color: var(--ice-blue-juvie);
+  color: var(--dark-slate-infinity);
+  border-radius: 6px;
+}
+
+/* MAIN CONTAINER */
+.container {
+  max-width: 950px;
+  margin: auto;
+  padding: 30px 20px;
+  background-color: #f5f5f5;
+}
+
+/* MAIN TITLE */
+.main-title {
+  text-align: center;
+  font-family: "Cinzel", serif;
+  color: var(--gothic-gray-blue);
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* SECTION TITLES */
+.section-title {
+  font-family: "Cinzel", serif;
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-top: 40px;
+}
+
+/* LISTS */
+.book-list {
+  margin-top: 20px;
+}
+
+.book-list li {
+  margin-bottom: 10px;
+}
+
+/* IMAGE ROW */
+.image-row {
+  display: flex;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* BOOK IMAGES */
+.book-img {
+  width: 260px;
+  border-radius: 8px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* IMAGE HOVER */
+.book-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* TABLE */
+.pov-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.pov-table th,
+.pov-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.pov-table th {
+  background-color: #e9ecef;
+  font-weight: bold;
+}
+
+.pov-table tr:last-child th {
+  text-align: center;
+}
+
+/* =========================
+   FORM PAGE
+========================= */
+
+/* BACKGROUND */
+.form-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #161678;
+}
+
+/* CARD */
+.form-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  width: 420px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* TITLE */
+.form-title {
+  text-align: center;
+  color: #161678;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* FORM GROUP */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* LABELS */
+.form-group label,
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+/* INPUTS */
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+/* INPUT FOCUS */
+.form-group input:focus {
+  outline: none;
+  border-color: #161678;
+}
+
+/* RADIO GROUP */
+.radio-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.radio-group input {
+  width: auto;
+}
+
+/* FIELDSET FIX (ACCESSIBILITY + NO BORDER) */
+.radio-fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.radio-fieldset legend {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+/* BUTTONS */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.button-group button {
+  width: 48%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+/* BUTTON HOVER */
+.button-group button:hover {
+  opacity: 0.9;
+}
+
+/* PRIMARY BUTTON */
+.button-group button[type="submit"] {
+  background-color: #161678;
+  color: white;
+}
+
+/* RESET BUTTON */
+.button-group button[type="reset"] {
+  background-color: #d3d3d3;
+}
+
+/* FOOTER */
+.form-footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.form-footer a {
+  color: #161678;
+  text-decoration: none;
+}
