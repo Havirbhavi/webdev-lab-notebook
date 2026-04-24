@@ -17,26 +17,29 @@
           <!-- Balance -->
           <div class="form-group">
             <label for="balance">Balance ($)</label>
-            <input type="number" id="balance" name="balance" />
+            <input type="text" id="balance" name="balance" />
           </div>
 
           <!-- Contribution -->
           <div class="form-group">
             <label for="contribution">Annual contribution ($)</label>
-            <input type="number" id="contribution" name="contribution" />
+            <input type="text" id="contribution" name="contribution" />
           </div>
 
           <!-- Radio -->
           <div class="form-group">
             <fieldset class="radio-fieldset">
               <legend>Maximize contribution?</legend>
-
               <div class="radio-group">
-                <input type="radio" id="yes" name="maximize" />
-                <label for="yes">Yes</label>
+                <label class="radio-option">
+                  <input type="radio" name="maximize" />
+                  Yes
+                </label>
 
-                <input type="radio" id="no" name="maximize" />
-                <label for="no">No</label>
+                <label class="radio-option">
+                  <input type="radio" name="maximize" />
+                  No
+                </label>
               </div>
             </fieldset>
           </div>

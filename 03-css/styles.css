@@ -6,6 +6,8 @@
   --ice-blue-juvie: #8fbcd4;
   --gothic-gray-blue: #6f8796;
   --dark-slate-infinity: #1f2a33;
+  --midnight-blue: #161678;
+  --deep-blue-background: #02025e;
 }
 
 /* =========================
@@ -136,21 +138,23 @@ body {
    FORM PAGE
 ========================= */
 
-/* BACKGROUND */
 .form-page {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #161678;
+  font-family: Arial, sans-serif;
 }
 
 /* CARD */
 .form-card {
-  background: #ffffff;
-  padding: 40px 30px;
-  border-radius: 16px;
-  width: 420px;
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 650px;
+  box-sizing: border-box;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -158,103 +162,119 @@ body {
 .form-title {
   text-align: center;
   color: #161678;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 700;
 }
 
-/* FORM GROUP */
+/* FORM GROUP*/
 .form-group {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
 }
 
-/* LABELS */
-.form-group label,
-.form-label {
-  display: block;
-  margin-bottom: 6px;
+/* LABEL */
+.form-group label {
+  width: 52%;
   font-size: 15px;
 }
 
-/* INPUTS */
+/* INPUT */
 .form-group input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  transition: border-color 0.2s ease;
+  width: 48%;
+  height: 54px;
+  padding: 10px 12px;
+  border: 2px solid #cfcfcf;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
 }
 
-/* INPUT FOCUS */
+/* FOCUS */
 .form-group input:focus {
   outline: none;
   border-color: #161678;
 }
-
-/* RADIO GROUP */
-.radio-group {
-  display: flex;
-  gap: 20px;
-  align-items: center;
+.form-group:has(.radio-fieldset) {
+  grid-template-columns: 200px 1fr;
 }
 
-.radio-group input {
-  width: auto;
-}
-
-/* FIELDSET FIX (ACCESSIBILITY + NO BORDER) */
+/* FIELDSET */
 .radio-fieldset {
   border: none;
   padding: 0;
   margin: 0;
+  grid-column: 2;
 }
 
+/* LEGEND */
 .radio-fieldset legend {
-  margin-bottom: 6px;
-  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-/* BUTTONS */
+/* RADIO ROW */
+.radio-group {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding-left: 45px;
+}
+
+.radio-group input {
+  width: auto;
+  height: auto;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-option input {
+  width: auto;
+  height: auto;
+}
+/* BUTTON GROUP */
 .button-group {
   display: flex;
   justify-content: space-between;
-  margin-top: 25px;
+  gap: 16px;
+  margin-top: 30px;
 }
 
+/* BUTTONS */
 .button-group button {
   width: 48%;
-  padding: 12px;
+  height: 54px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
-  transition: opacity 0.2s ease;
 }
 
-/* BUTTON HOVER */
-.button-group button:hover {
-  opacity: 0.9;
-}
-
-/* PRIMARY BUTTON */
+/* PRIMARY */
 .button-group button[type="submit"] {
   background-color: #161678;
   color: white;
 }
 
-/* RESET BUTTON */
+/* RESET */
 .button-group button[type="reset"] {
   background-color: #d3d3d3;
 }
 
 /* FOOTER */
 .form-footer {
-  margin-top: 20px;
-  font-size: 14px;
+  text-align: left;
+  width: 100%;
+  display: block;
 }
 
 .form-footer a {
   color: #161678;
-  text-decoration: none;
+  text-decoration: underline;
 }
