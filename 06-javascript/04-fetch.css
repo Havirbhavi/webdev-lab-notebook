@@ -9,6 +9,133 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--main-color);
   background-color: var(--bg-color);
+  margin: 0;
 }
 
 /* Add your code here */
+.navbar {
+  background-color: var(--pokemon-yellow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.brand-logo {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0px;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+
+.search-box {
+  width: 280px;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.search-box:focus {
+  outline: 2px solid var(--main-color);
+}
+
+.loader-container {
+  min-height: 70vh;
+  color: var(--main-light-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.loader {
+  width: 70px;
+  height: 70px;
+}
+
+.pokemon-container {
+  width: 80%;
+  max-width: 1300px;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.pokemon-card {
+  background-color: var(--main-light-color);
+  min-height: 300px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.pokemon-card:hover {
+  background-color: var(--pokemon-yellow);
+}
+
+.pokemon-card h2 {
+  margin: 0 0 1.5rem;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+  letter-spacing: 1px;
+}
+
+.pokemon-card img {
+  width: 220px;
+  height: 190px;
+  object-fit: contain;
+}
+
+.type-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 1.5rem;
+}
+
+.type {
+  padding: 0.45rem 0.65rem;
+  font-size: 1rem;
+  text-transform: lowercase;
+}
+
+.no-results {
+  color: var(--main-light-color);
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .pokemon-container {
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .pokemon-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
